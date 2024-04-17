@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    width: 100px;
+    color: #fa0404;
+    text-decoration: none;
+    transition: 0.3s;
+}
+body{
+    width: 100%;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #f58a8ac5 100%);
+
+}
+
+a:hover {
+    opacity: 0.7;
+    color: #f8f8f8;
+    background-color: #7c1f1f;
+
+}
+
+.cadastroPessoaConfianca{
+    width: 100px;
+    color: #fa0404;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.nomeApp {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: Kiwi Maru;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Kiwi 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+
+.txtTitulo{
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+
+}
+
+.txtTexto{
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+}
+
+section {
+    width:800px;
+    background-color: #f0e1e1ef;
+    margin: 20px;
+    padding: 20px;    
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ccacac, #f3cccc);
+    box-shadow:  27px 27px 100px #8f7878,
+                 -27px -27px 50px #dddbdbb9;
+    
+}
+h1{
+    font-family: Kiwi 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    justify-content: center;
+
+}
+h2{
+    font-family: Kiwi 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+.legenda{
+    font-family: Kiwi 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+
+}
+.sectionDesc{
+    width: 1200px;
+}
+
+.sectionBase{
+    background-color: #f0e1e1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flexbox;    
+
+}
+img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+}
+.imgMedico{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+
+.integrantes{
+    background-color: #f0e1e1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display:grid;
+    float: none;
+}
+main {
+    background-size: cover;
+    height: 92vh;
+}
+
+.menuList {
+    list-style: none;
+    display: flex;
+}
+
+.menuList li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.menuHamburguer {
+    color: #23232e;
+    display: none;
+    cursor: pointer;
+}
+
+.menuHamburguer div {
+    width: 32px;
+    height: 2px;
+    background: #fa0404;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .menuList {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .menuList li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .menuHamburguer {
+        display: block;
+    }
+    .sectionDesc{
+        width: auto;
+    }
+    .integrantes{
+        width: auto;
+    }
+    img{
+        width: auto;
+    }
+    .imgMedico{
+        
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
+    #statusContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 50px;
+        
+    }
+    
+
+}
+
+.menuList.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menuHamburguer.active .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.menuHamburguer.active .linha2 {
+    opacity: 0;
+}
+
+.menuHamburguer.active .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.fotos{
+    width: 200px;
+    height: auto;
+    justify-content: left;
+    align-items: left;
+    
+}
+
+#statusContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.caixaStatus { 
+    width: 200px;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.saudavel {
+    background-color: #aaffaa;
+}
+
+.atencao {
+    background-color: #ffdd99;
+}
+
+.critico {
+    background-color: #ffaaaa;
+}
+
+button {
+    align-items: center;
+    background-color: transparent;
+    color: #db9393;
+    cursor: pointer;
+    display: flex;
+    font-family: Kiwi Maru;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  button:before {
+    background-color: #c06969;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+  button:hover:before {
+    background-color: #dd9494;
+    width: 3rem;
+  }
+  footer {
+    height: 100px;
+    background-color: #23232e;
+    color: #fa0404;
+    text-align: center;
+    padding: 10px 0;
+}

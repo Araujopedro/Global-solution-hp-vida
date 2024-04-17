@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Usuário</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <button>
+            <a class="nomeApp" href="gs_pag_inicial.html"> S.M.M.</a>
+          </button>
+        <div class="menuHamburguer">
+          <div class="linha1"></div>
+          <div class="linha2"></div>
+          <div class="linha3"></div>
+        </div>
+        <ul class="menuList">
+            <button>
+               <li><a href="status.html">Status</a></li>
+            </button>
+            <button>
+              <li><a href="login.html">Login</a></li>
+            </button>
+            <button>
+              <li><a href="confianca.html">Pessoas de Confiança</a></li>
+            </button>
+            <button>
+              <li><a href="sobre_a_empresa.html">Sobre o App</a></li>
+            </button>
+            <button>
+              <li><a href="cadastro_usuário.html">Cadastre-se</a></li>
+            </button>        
+            <button>
+              <li><a href="integrantes.html">Integrantes</a></li>
+            </button>           
+          </ul>
+      </nav>
+      <h1>Cadastre os seus dados: </h1>
+      <form name="frmCadastro" action="index.html" method="POST">
+
+        <fieldset class="sectionBase">
+            <legend class="legenda">Dados Pessoais</legend>
+            <input type="hidden" name="txtOculto" id="txtOcuto" value="campo oculto">
+            <label for="txtNome">Nome: </label>
+            <span id="erroNome"></span>
+            <input type="text" name="txtNome" id="txtNome" maxlength="100" accesskey="n" tabindex="1">
+            <br>
+            <label for="dataNasc">Data Nascimento: 
+                <input type="date" name="dataNasc" id="dataNasc" min="2000-01-03" max="2023-11-05">
+            </label>        
+            <br>
+            <label for="txtCPF">CPF: 
+                <input type="text" name="txtCPF" id="txtCPF" maxlength="11">
+                <span id="erroCpf"></span>
+            </label>
+            <br>
+            <label for="txtTEL">TEL: 
+                <input type="tel" name="txtTEL" id="txtTEL" maxlength="14">
+            </label><br>
+            <label for="txtEmail">E-Mail: 
+                <input type="email" name="txtEmail" id="txtEmail">
+                <span id="erroEmail"></span>
+            </label>
+            <br>
+            <label for="pwdSenha">Senha:
+                <input type="password" name="pwdSenha" id="pwdSenha">
+                <span id="erroSenha"></span>
+            </label>
+            <br>
+            <label for="rdoSexoM">
+                <input type="radio" name="rdoSexo" id="rdoSexoM" value="F">Masculino
+            </label>        
+            <label for="rdoSexoF">
+                <input type="radio" name="rdoSexo" id="rdoSexoF" value="F">Feminino
+            </label>
+            <label for="rdoSexoO">
+                <input type="radio" name="rdoSexo" id="rdoSexoO" value="O">Outros
+            </label>
+            <br>
+            <label for="txtTipoS">Tipo Sanguineo: 
+                <input type="text" name="txtTipoS" id="txtTipoS">
+            </label>
+            <br>
+            <label for="txtDoenca">Possui alguma doença em tratamento: 
+                <input type="text" name="txtDoenca" id="txtDoenca">
+            </label>
+            
+        </fieldset>
+        <br>
+        <fieldset class="sectionBase">
+            <legend class="legenda">Dados Gerais</legend>
+            <label for="cmbUF">UF:
+                <select name="cmbUF" id="cmbUF">
+                    <optgroup label="Região Sul">
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Caterina</option>
+                        <option value="PR">Paraná</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option selected>Selecione</option>
+                    </optgroup>
+                </select>
+            </label>
+            <br>
+            <label for="pwdSenha">Endereço:
+                <input type="text" name="txtEndereco" id="txtEndereco">
+            </label>
+            <br>
+            <label for="pwdSenha">CEP:
+                <input type="text" name="txtCep" id="txtCep">
+            </label>       
+            <br>
+            <label for="txtObservacoes">Observações: 
+                <textarea name="txtObservacoes" id="txtObservacoes"></textarea>
+            </label>
+            <br>
+            <label for="chkTermos">Termos
+                <input type="checkbox" name="chkTermos" id="chkTermos" value="Concordo">
+            </label>
+            <br>
+            <label for="upload">Enviar arquivo: 
+                <input type="file" name="upload" id="upload">
+            </label>
+            <br>
+            </label>
+            <br>
+            
+        </fieldset>
+        <input type="submit" value="Enviar Cadastro" onclick="return validar()">
+        <input type="reset" value="Apagar">
+        
+    </form>
+    </header>
+    <main></main>
+    <h1><a href="integrantes.html">Integrantes</a></h1>
+    
+  </body>
+  <footer>
+    <p>Felipe Amador Matos RM: 553528</p>
+    <p>Pedro Henrique Araujo RM: 553801</p>
+    <p>Izis de Fátima RM: 553759</p>
+  </footer>
+</html>
